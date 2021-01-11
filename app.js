@@ -7,7 +7,8 @@ const gamedig = require('gamedig');
 const update = () => {
     gamedig.query({
         type: 'minecraft',
-        host: process.env.ip
+        host: process.env.ip,
+        port: process.env.port
     }).then((state) => {
         // Count number of players.
         let players = 0;
